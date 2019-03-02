@@ -1,0 +1,138 @@
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+body {
+		font-family: 'Open Sans', sans-serif;
+	}
+	label {
+		display: block;
+		font-size: .8em;
+		margin-bottom: .5em;
+	}
+	.results {
+		border: 1px solid;
+		height: 250px;
+		max-width: 100%;
+	}
+	.form-group {
+		margin-bottom: 1em;
+	}
+	.game-board {
+		display: flex;
+		justify-content: space-between;
+		align-items: stretch;
+		
+		.hand {
+			flex: 0 1 48%;
+			min-height: 150px;
+		}
+		.cards {
+			border: 1px solid;
+			min-height: 150px;
+		}
+		.points {
+			margin-left: .25em;
+			color: blue;
+		}
+	}
+.cards-remaining {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	.card-container {
+		position: relative;
+		width: 120px;
+		height: 160px;
+		border: 1px solid;
+		border-radius: 5px;
+		background-color: white;
+		margin: 0 .5em .5em 0;
+	}
+	.card-value {
+		position: absolute;
+		top: .25em;
+		left: .25em;
+	}
+	.suit {
+		position: absolute;
+		top: 50%;
+    left: 50%;
+		height: 99px;
+		transform: translate(-50%,-50%);
+		&.spade {
+			background: url(images/spade.png) no-repeat;
+			width: 77px;
+		}
+		&.heart {
+			background: url(images/heart.png) no-repeat;
+			width: 87px;
+		}
+		&.diamond {
+			background: url(images/diamond.png) no-repeat;
+			width: 73px;
+		}
+		&.club {
+			background: url(images/club.png) no-repeat;
+			width: 100px;
+		}
+	}
+}
+
+.modal-wrapper {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: fade(black, 60%);
+}
+.modal-container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	padding: .5em;
+	background-color: white;
+	border: 2px solid black;
+	border-radius: .5em;
+	width: 50vw;
+	display: flex;
+	flex-direction: column;
+	
+	justify-content: space-between;
+	> div {
+		padding: .5em;
+		width: 100%;
+		text-align: center;
+	}
+	.modal-header{
+		font-family: 'Raleway', sans-serif;
+		font-weight: 700;
+		font-size: 2em;
+		border-bottom: 1px solid black;
+	}
+	.modal-body {
+		border-bottom: 1px solid black;
+	}
+}
+
+.btn {
+	background-color: transparent;
+	border: none;
+	border-radius: .25em;
+	padding: .5em;
+	text-transform: uppercase;
+	font-weight: 600;
+	
+	&.primary {
+		background-color: lightskyblue;
+		border: 1px solid darken(lightskyblue, 10%);
+	}
+	&.secondary {
+		background-color: lightgrey;
+		border: 1px solid darken(lightgrey, 10%);
+	}
+}
