@@ -18,4 +18,4 @@ if __name__ == "__main__":
 
 #app = flask(_name_)
 #host='0.0.0.0', port=8080,
-#, template_folder='D:\ScalaProjects\GoFishClone\FrontEnd'
+#, template_folder=' '
