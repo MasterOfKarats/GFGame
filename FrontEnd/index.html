@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Play Go Fish!</title>
+    <link href=''>
+</head>
+<body>
+
+<div id="currentPlayer"></div>
+
+<form>
+    <div class="form-group">
+        <button type="button" id="beginGame" class="btn primary">Begin Game</button>
+    </div>
+    <div class="form-group">
+        <label for="cardToMatchInput">Which card do you need?</label>
+        <input id="cardToMatchInput" type="text">
+        <div class="error-message">Please enter a number from 1 to 13</div>
+        <button type="button" id="cardValue" class="btn-primary">Do you have this card?</button>
+    </div>
+</form>
+<div id="gameboard" class="game-board">
+    <div id="playersHand" class="hand player1">
+        <label>First Player</label>
+        <span id="Player1Points" class=""></span>
+    </div>
+    <div id="playersHand" class="hand player1">
+        <label>Second Player</label>
+        <span id="Player2Points" class=""></span>
+    </div>
+</div>
+</body>
+</html>
